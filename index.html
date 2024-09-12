@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-    <img src="images/santiago.jpg" alt="Santiago Varela" class="header-img">
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Mi Portafolio</title>
@@ -10,16 +9,17 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body>          
+    <a href="#main" class="skip-link">Saltar al contenido</a>
     <header>
-
+        <img src="images/santiago.jpg" alt="Santiago Varela" class="header-img">
         <h1 class="header">Santiago Varela</h1>
         <h2 class="subtitle">Front End Developer</h2>
         <nav>
             <ul class="navigation">
-                <li class="nav-item" href="/about-me">About me</li>
-                <li class="nav-item" href="/projects">Projects</li>
-                <li class="nav-item" href="/Contact">Contact</li>
+                <li class="nav-item"><a href="/about-me">About me</a></li>
+                <li class="nav-item" ><a href="/projects>">Projects</a></li>
+                <li class="nav-item"><a href="/Contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +39,7 @@
 
         <ul class="social-media">
             <li>
-                <a href="https://twitter.com/santiagovrela" target="_blank"><img src="images/twitter.png" alt="My Twitter" /></a>
+                <a href="https://twitter.com/santiagovrela" target="_blank"><img src="images/twitter.png" alt="My Twitter" /><p class="social-link-text">Twitter</p></a>
             </li>
             <li>
                 <a href="https://github.com/santiagovok" target="_blank"><img src="images/github-logo.png" alt="My GitHub"/></a>
@@ -55,29 +55,29 @@
 <section>
     <h2 class="header">Projects</h2>
     <div class="carousel">
-        <div class="arrow arrow-left"></div>
+        <div class="arrow arrow-left" aria-label="backward button"></div>
         <div class="window">
             <ul class="project-container">
-                <li><button></button><img src="images/project1.png" alt="Primer proyecto" class="project"></li>
-                <li><button></button><img src="images/project2.png" alt="Segundo proyecto" class="project"></li>
-                <li><button></button><img src="images/project3.png" alt="Tercer proyecto" class="project"></li>
-                <li><button></button><img src="images/project4.png" alt="Cuarto proyecto" class="project"></li>
-                <li><button></button><img src="images/project5.png" alt="Quinto proyecto" class="project"></li>
+                <li><button><img src="images/project1.png" alt="Primer proyecto" class="project"></button></li>
+                <li><button><img src="images/project2.png" alt="Segundo proyecto" class="project"></button></li>
+                <li><button><img src="images/project3.png" alt="Tercer proyecto" class="project"></button></li>
+                <li aria-hidden="true"><button><img src="images/project4.png" alt="Cuarto proyecto" aria-hidden="true" class="project"></button></li>
+                <li aria-hidden="true"><button><img src="images/project5.png" alt="Quinto proyecto" class="project"></button></li>
             </ul>
         </div>
-        <div class="arrow arrow-right"></div>
+        <div class="arrow arrow-right" aria-label="forward button"></div>
     </div>
 </section>
 
-</main>
+</main id="main">
 
 <footer class="contact-section">
-        <h2 class="header">Contacto</h2>
+        <h2 class="header">Contact</h2>
         <form class="form-container">
-            Nombre<input type="text" /> <br />
-            Correo<input type="text" /> <br />
-            <div class="message-input">Mensaje<input type="text" /> <br /></div>
-            <button class="send-button">Enviar</button>
+            Name<input type="text" aria-label="name" /> <br />
+            Email<input type="text" aria-label="email" /> <br />
+            <div class="message-input">Message<input type="text" /> <br /></div>
+            <button class="send-button">Send</button>
         </form>
 </footer>
 
