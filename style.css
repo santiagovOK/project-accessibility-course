@@ -69,6 +69,8 @@ html {
     margin: 16px 0 8px;
     padding:  8px;
     text-decoration: none;
+    border: 5px solid var(--gris-oscuro);
+    outline: 5px solid var(--verde);
   }
   
   .header {
@@ -149,7 +151,6 @@ html {
     display: flex;
     justify-content: space-around;
     margin: 32px auto 0;
-    width: 20%;
   }
 
   .social-media li a {
@@ -206,7 +207,7 @@ html {
   }
   
   
-  .project {
+  .project-img {
     border-radius: 5px;
     border: 2px solid #000;
     display: inline-block;
@@ -252,6 +253,11 @@ html {
     transform: scale(1.1);
   }
   
+  .arrow:focus{
+    outline: 3px solid var(--verde);
+  }
+  
+  
   .arrow-left {
     background: center / contain no-repeat url(./images/play-button-left.png);
     background-color: var(--verde);
@@ -263,6 +269,9 @@ html {
     background-color: var(--verde);
     border-radius: 50%;
   }
+
+
+
   
   .contact-section {
     align-items: center;
@@ -276,7 +285,11 @@ html {
     display: flex;
     flex-direction: column;
     width: 30%;
-    color: var(--blanco);
+  }
+
+  .form-label, .message-input {
+    color: var(--verde);
+    font-family: var(--secondary-font);
   }
   
   .message-input input {
@@ -293,11 +306,11 @@ html {
     padding: 8px;
   }
   
-  .send-button {
+  .send-button, .modal-button {
     align-items: center;
     background-color: var(--verde);
     border-radius: 5px;
-    color: white;
+    color: var(--gris-oscuro);
     font-family: var(--secondary-font);
     font-size: 16px;
     display: flex;
@@ -306,6 +319,7 @@ html {
     margin-bottom: 48px;
     width: 150px;
     margin-left: auto;
+    cursor: pointer;
   }
   
   .notification {
@@ -341,11 +355,12 @@ html {
     border: 2px solid #000;
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 600px;
     justify-content: center;
     position: fixed;
-    top: 15%;
+    top: 10%;
     width: 700px;
+    padding: 56px;
   }
   
   .modal-project-image {
