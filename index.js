@@ -3,11 +3,12 @@ window.onload = () => {
     document.querySelector(".arrow-left").addEventListener("click", clickLeft);
     document
       .querySelector(".send-button")
-      .addEventListener("click", showNotification);
+      .addEventListener("click", e => validateForm(e));
     document.querySelectorAll(".project").forEach(element => {
       element.addEventListener("click", e => openModal(e));
     });
     document.body.addEventListener("click", e => closeModal(e));
+    document.body.addEventListener("keyup", e => listenForEsc(e));
   };
   
   /** Esta funcion se llama cuando la persona hace click en la fecha derecha del carousel para navegar a la derecha */
@@ -69,18 +70,42 @@ window.onload = () => {
           break;
     }
   }
+
+
+/* Validar el formulario antes de mostrar la notificación  */
+function validateForm(e) {
+  e.preventDefault(); // Corrected case
+  const nameField = document.getElementById("name");
+  if (nameField.value === "") { // Accessing the value of the input field
+    document.getElementById("name-error").innerHTML = "! To submit the form, a name is required";
+  } else {
+    showNotification();
+  }
+};
   
   /** Esta funcion se llama cuando la persona hace click en el boton de enviar del formulario de contacto */
   function showNotification() {
+    document.getElementById("name-error").innerHTML = "";
+    document.querySelector(".form-container").reset();
     document.querySelector(".notification").style.display = "flex";
+    document.querySelector(".notification").innerHTML = "The form was submitted without errors";
     setTimeout(function() {
       document.querySelector(".notification").style.display = "none";
     }, 3000);
+  }
+
+  /* Escucha por la clave esc para cerrar el modal */
+
+  function listenForEsc(e) {
+    if (e.keyCode === 27){
+      closeModal(e)
+    }
   }
   
   /** Esta funcion se llama cuando la persona hace click en cualquier porjecto del carousel */
   function openModal(e) {
     document.querySelector(".modal-container").style.display = "flex";
+    document.getElementById('modal-header').focus();
   }
   
   /** Esta funcion se llama para cerrar el modal */

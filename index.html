@@ -4,22 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>Mi Portafolio</title>
+    <title>My Portfolio</title>
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet" />
 </head>
 
 <body>          
-    <a href="#main" class="skip-link">Saltar al contenido</a>
+    <a href="#main" class="skip-link">Skip Content</a>
     <header>
         <img src="images/santiago.jpg" alt="Santiago Varela" class="header-img">
         <h1 class="header">Santiago Varela</h1>
         <h2 class="subtitle">Front End Developer</h2>
         <nav>
             <ul class="navigation">
-                <li class="nav-item"><a href="/about-me">About me</a></li>
-                <li class="nav-item" ><a href="/projects>">Projects</a></li>
-                <li class="nav-item"><a href="/Contact">Contact</a></li>
+                <li class="nav-item"><a href="https://www.linkedin.com/in/santiagovrela/" rel="noopener" target="_blank">About me</a></li>
+                <li class="nav-item" ><a href="https://github.com/santiagovok" rel="noopener" target="_blank">Projects</a></li>
+                <li class="nav-item"><a href="https://www.linkedin.com/in/santiagovrela/" rel="noopener" target="_blank">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -39,10 +39,10 @@
 
         <ul class="social-media">
             <li>
-                <a href="https://twitter.com/santiagovrela" target="_blank"><img src="images/twitter.png" alt="My Twitter" /><p class="social-link-text">Twitter</p></a>
+                <a href="https://twitter.com/santiagovrela" rel="noopener" target="_blank"><img src="images/twitter.png" alt="My Twitter" /><p class="social-link-text">Twitter</p></a>
             </li>
             <li>
-                <a href="https://github.com/santiagovok" target="_blank"><img src="images/github-logo.png" alt="My GitHub"/><p class="social-link-text">GitHub</p></a>
+                <a href="https://github.com/santiagovok" rel="noopener" target="_blank"><img src="images/github-logo.png" alt="My GitHub"/><p class="social-link-text">GitHub</p></a>
             </li>
             <li>
                 <a href="https://www.linkedin.com/in/santiagovrela/" target="_blank"><img
@@ -73,20 +73,22 @@
 
 <footer class="contact-section">
         <h2 class="header">Contact</h2>
+        <!-- <p class="intro">You can use the following form to send me a message</p> -->
         <form class="form-container">
-           <p class="form-label">Name</p><input type="text" aria-label="name" /> <br />
-            <p class="form-label">Email</p><input type="text" aria-label="email" /><br />
-            <div class="message-input">Message<input type="text" /> <br /></div>
-            <button class="send-button">Send</button>
+           <label class="form-label">Name</label><input type="text" aria-label="name" id="name"/> <br/>
+           <span id="name-error" aria-live="assertive"></span>
+            <label class="form-label">Email</label><input type="text" aria-label="email" /><br/>
+            <label class="message-input">Message<input type="text" /> <br /></label>
+            <button class="send-button">Submit</button>
         </form>
 </footer>
 
-    <div class="notification">El formulario fue enviado sin errores</div>
+    <div class="notification" aria-live="assertive">The form was submitted without errors</div>
     <div class="modal-container">
         <div class="modal">
-            <h2>Ejemplo de un proyecto mio</h2>
+            <h2 class="header" id="modal-header" tabindex="0">Example of one of my projects</h2>
             <img src="images/project1.png" class="modal-project-image" alt="Un pantallazo de mi projecto"/>
-            <button class="modal-button">Cerrar</button>
+            <button class="modal-button">Close</button>
         </div>
     </div>
 
