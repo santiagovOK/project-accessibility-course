@@ -38,7 +38,7 @@ Web accessibility standards; Semantic HTML; effects, colors, and contrast in CSS
 ## Descripción
 
 Se trata de una web dinámica básica basada en HTML, CSS y JS que da una descripción sencilla de un perfil y presenta los proyectos en los cuales está trabajando.
-En las clases se comienza con una web base pero con mala accessibilidad, para así ir modificandola. Al finalizar el curso, el proyecto no termina siendo responsivo y adecuado para todos los dispositivos (quedará así de momento).
+En las clases se comienza con una web base pero con mala accesibilidad, para así ir modificandola. Al finalizar el curso, el proyecto no termina siendo responsivo y adecuado para todos los dispositivos (quedará así de momento).
 
 ## Consideraciones / Aprendizaje
 
@@ -50,7 +50,7 @@ Seguramente volveré a este proyecto para seguir repasando estas cuestiones, as�
 
 ## Habilidades adquiridas
 
-Estándares en accesibilidad web; HTML Semántico; efectos, colores y contraste en CSS para mejorar la accessibilidad; tecnologías asistivas (visuales, motoras) implementaciones en HTML y JS para mejorar la navegación con teclado.
+Estándares en accesibilidad web; HTML Semántico; efectos, colores y contraste en CSS para mejorar la accesibilidad; tecnologías asistivas (visuales, motoras) implementaciones en HTML y JS para mejorar la navegación con teclado.
 
 ## Repositorio oficial del curso
 
